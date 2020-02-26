@@ -77,4 +77,4 @@ const baseHtml = `<header>
 </div>
 </main>`;
 
-document.body.insertAdjacentHTML('afterbegin',baseHtml);
+export default baseHtml;

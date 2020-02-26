@@ -1,3 +1,4 @@
-import './scss/base.scss'
+import './scss/base.scss';
+import baseHtml from './js/initLanding.js';
 
-import './js/init.js';
+document.body.insertAdjacentHTML('afterbegin',baseHtml);
