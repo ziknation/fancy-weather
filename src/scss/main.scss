@@ -1,0 +1,84 @@
+@font-face {
+  font-family: MontserratBold;
+  src: url(/src/font/MontserratBold.ttf);
+}
+
+main{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+  & .forecast{
+    &--general_information{
+      display: flex;
+      &-text{
+        &-place{
+          font-size: 44px;
+          font-weight: bold;
+        }
+        &-date{
+          font-size: 24px;
+        }
+      }
+      &-img{
+        width: 200px;
+        position: relative;
+        top: 50px;
+        right: 70px;   
+        margin-bottom: -100px; 
+      }
+    }
+    &--main_information{
+      width: 460px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-temperature{
+        font-family: MontserratBold;
+        font-size: 206px;
+        font-weight: bold;
+        &-span{
+          font-size: 120px;
+          font-family: Montserrat;
+          font-weight: bold;
+          vertical-align: top;
+        }
+      }
+      &-addition{
+        font-size: 21px;
+        padding-top: 50px;
+        font-weight: bold;
+      }
+    }
+    &--next_days{
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 22px;
+      font-weight: bold;
+      & .next_days_icon{
+        font-size: 70px;
+      }
+      & .next_days_wrapper{
+        display: flex;
+      }
+      & .next_days_img{
+        height: 70px;
+      }
+    }
+  }
+  & .location{
+    margin-top: 120px;
+    &--map{
+      & img{
+        border-radius: 16px;
+      }
+    }
+    &--coordinates{
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  }
+}
