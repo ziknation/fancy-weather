@@ -70,10 +70,7 @@ const baseHtml = `<header>
   <div class="location--map">
     <img src="/src/img/map.png" alt="map">
   </div>
-  <div class="location--coordinates">
-    Latitude: 53°54' <br> 
-    Longitude: 27°34'
-  </div>
+  <div class="location--coordinates"></div>
 </div>
 </main>`;
 

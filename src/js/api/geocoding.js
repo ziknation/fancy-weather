@@ -1,4 +1,4 @@
-import drawCurrentLocation from '../drawCurrentLocation';
+import getWeather from "./getWeather";
 
 async function geocoding(mainData) {
   let apiKey = 'e42603ebcd574a43819b2249318b655a';
@@ -17,7 +17,7 @@ async function geocoding(mainData) {
   }
   mainData.place.country = data.results[0].components.country;
   mainData.place.city = data.results[0].components.city;
-  drawCurrentLocation(mainData);
+  getWeather();
 }
 
 export default geocoding;

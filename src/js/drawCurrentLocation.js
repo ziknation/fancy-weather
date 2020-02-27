@@ -4,5 +4,5 @@ export default function drawCurrentLocation(mainData){
 
   place.innerHTML = mainData.place.city + ', ' + mainData.place.country;
   location.innerHTML = `Latitude: ${mainData.coordinates.latitude} <br>
-  Longitude: ${mainData.coordinates.longitude}` ;
+  Longitude: ${mainData.coordinates.longitude}`;
 }
