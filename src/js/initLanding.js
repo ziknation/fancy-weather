@@ -23,7 +23,7 @@ const baseHtml = `<header>
 <div class="forecast">
   <div class="forecast--general_information">
     <div class="forecast--general_information-text">
-      <p class="forecast--general_information-text-place">Minsk, Belarus</p>
+      <p class="forecast--general_information-text-place"></p>
       <p class="forecast--general_information-text-date">Mon 28 October 17:23</p>
     </div>
     <img src="/src/img/animated/cloudy-day-1.svg" alt="cloudy-day-1" class="forecast--general_information-img">
