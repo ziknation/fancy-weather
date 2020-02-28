@@ -1,5 +1,3 @@
-import mainData from '../mainData'
-
 async function usersCurrentLocation() {
   //let token = '680fc6f5c1667a';
   let token = 'eb5b90bb77d46a';

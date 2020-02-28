@@ -1,3 +1,5 @@
+import drawCurrentLocation from './drawCurrentLocation';
+
 export default function fillWeatherInMainData(data, mainData){
   mainData.weather.current.sky = data.list[0].weather[0].description;
   mainData.weather.current.temperature = data.list[0].main.temp;
@@ -13,5 +15,6 @@ export default function fillWeatherInMainData(data, mainData){
 
   mainData.weather.day3.sky = data.list[24].weather[0].description;
   mainData.weather.day3.temperature = data.list[24].main.temp;
-  console.log(mainData.weather);
+  
+  drawCurrentLocation(mainData);
 }

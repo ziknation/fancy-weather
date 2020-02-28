@@ -11,13 +11,9 @@ async function geocoding(mainData) {
 
   let response = await fetch(url);
   let data = await response.json();
-  let place = {
-    country: data.results[0].components.country,
-    city: data.results[0].components.city
-  }
   mainData.place.country = data.results[0].components.country;
   mainData.place.city = data.results[0].components.city;
-  getWeather();
+  getWeather(mainData);
 }
 
 export default geocoding;
