@@ -26,10 +26,10 @@ const baseHtml = `<header>
       <p class="forecast--general_information-text-place"></p>
       <p class="forecast--general_information-text-date">Mon 28 October 17:23</p>
     </div>
-    <img src="/src/img/animated/cloudy-day-1.svg" alt="cloudy-day-1" class="forecast--general_information-img">
+    <img src="/src/img/animated/weather.svg" alt="weatherSVG" class="forecast--general_information-img">
   </div>
   <div class="forecast--main_information">
-    <p class="forecast--main_information-temperature">10<span class="forecast--main_information-temperature-span">&deg;</span></p>
+    <p class="forecast--main_information-temperature"><p>
     <p class="forecast--main_information-addition">
       overcast <br>
       Feels like: 7° <br>
@@ -43,7 +43,7 @@ const baseHtml = `<header>
         <div class="forecast--next_days-first-icon next_days_icon">
           <p>7&deg;</p>
         </div>
-        <img src="/src/img/animated/day.svg" alt="day" class="next_days_img">
+        <img src="/src/img/animated/weather.svg" alt="weatherSVG" class="next_days_img day_1_img">
       </div>
     </div>
     <div class="forecast--next_days-second">
@@ -52,7 +52,7 @@ const baseHtml = `<header>
         <div class="forecast--next_days-second-icon next_days_icon">
           <p>7&deg;</p>
         </div>
-        <img src="/src/img/animated/snowy-3.svg" alt="snowy-3" class="next_days_img">
+        <img src="/src/img/animated/weather.svg" alt="weatherSVG" class="next_days_img day_2_img">
       </div>
     </div>
     <div class="forecast--next_days-third">
@@ -61,7 +61,7 @@ const baseHtml = `<header>
         <div class="forecast--next_days-third-icon next_days_icon">
           <p>7&deg;</p>
         </div>
-        <img src="/src/img/animated/thunder.svg" alt="thunder" class="next_days_img">
+        <img src="/src/img/animated/weather.svg" alt="weatherSVG" class="next_days_img day_3_img">
       </div>
     </div>
   </div>
