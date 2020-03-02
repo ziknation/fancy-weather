@@ -8,13 +8,13 @@ export default function fillWeatherInMainData(data, mainData){
   mainData.weather.current.humidity = +data.list[0].main.humidity;
 
   mainData.weather.day1.sky = data.list[8].weather[0].main;
-  mainData.weather.day1.temperature = +data.list[8].main.temp;
+  mainData.weather.day1.temperature = Math.round(data.list[8].main.temp);
 
   mainData.weather.day2.sky = data.list[16].weather[0].main;
-  mainData.weather.day2.temperature = +data.list[16].main.temp;
+  mainData.weather.day2.temperature = Math.round(data.list[16].main.temp);
 
   mainData.weather.day3.sky = data.list[24].weather[0].main;
-  mainData.weather.day3.temperature = +data.list[24].main.temp;
+  mainData.weather.day3.temperature = Math.round(data.list[24].main.temp);
   
   drawCurrentLocation(mainData);
 }

@@ -30,18 +30,14 @@ const baseHtml = `<header>
   </div>
   <div class="forecast--main_information">
     <p class="forecast--main_information-temperature"><p>
-    <p class="forecast--main_information-addition">
-      overcast <br>
-      Feels like: 7° <br>
-      Wind: 2 m/s <br>
-      Humidity: 83%</p>
+    <p class="forecast--main_information-addition"></p>
   </div>
   <div class="forecast--next_days">
     <div class="forecast--next_days-first">
-      <p class="forecast--next_days-first-day">Tuesday</p>
+      <p class="forecast--next_days-first-day"></p>
       <div class="next_days_wrapper">
         <div class="forecast--next_days-first-icon next_days_icon">
-          <p>7&deg;</p>
+          <p class="day_1_temp">7&deg;</p>
         </div>
         <img src="/src/img/animated/weather.svg" alt="weatherSVG" class="next_days_img day_1_img">
       </div>
@@ -50,7 +46,7 @@ const baseHtml = `<header>
       <p class="forecast--next_days-second-day">Wednesday</p>
       <div class="next_days_wrapper">
         <div class="forecast--next_days-second-icon next_days_icon">
-          <p>7&deg;</p>
+          <p class="day_2_temp">7&deg;</p>
         </div>
         <img src="/src/img/animated/weather.svg" alt="weatherSVG" class="next_days_img day_2_img">
       </div>
@@ -59,7 +55,7 @@ const baseHtml = `<header>
       <p class="forecast--next_days-third-day">Thursday</p>
       <div class="next_days_wrapper">
         <div class="forecast--next_days-third-icon next_days_icon">
-          <p>7&deg;</p>
+          <p class="day_3_temp">7&deg;</p>
         </div>
         <img src="/src/img/animated/weather.svg" alt="weatherSVG" class="next_days_img day_3_img">
       </div>
