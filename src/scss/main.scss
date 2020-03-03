@@ -6,7 +6,7 @@
 main{
   width: 90%;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   color: $white;
@@ -70,10 +70,10 @@ main{
     }
   }
   & .location{
-    margin-top: 120px;
+    margin-top: 0;
     &--map{
       width: 450px;
-      height: 450px;
+      height: 400px;
       & img{
         border-radius: 16px;
       }
@@ -83,4 +83,8 @@ main{
       font-size: 20px;
     }
   }
+}
+
+.ymaps-2-1-75-map ymaps{
+  border-radius: 10px;
 }

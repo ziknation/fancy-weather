@@ -12,10 +12,10 @@ const baseHtml = `<header>
       <p class="controls--units-celsius">C</p>
     </div>        
   </div>
-  <form class="search">
+  <div class="search">
     <input type="text" class="search--text">
-    <input type="submit" value="SEARCH" class="search--submit">
-  </form>
+    <button class="search--button">SEARCH</button>
+  </div>
 </div>
 </header>
 

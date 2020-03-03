@@ -11,7 +11,6 @@ $grey: #888888;
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
-  margin-bottom: 50px;
   .controls{
     width: 210px;
     display: flex;
@@ -67,7 +66,7 @@ $grey: #888888;
     }
   }
   .search{
-    &--text, &--submit{
+    &--text, &--button{
       margin: 0;
       padding: 0;
       border: 0;
@@ -83,7 +82,7 @@ $grey: #888888;
       padding: 0 10px;
       color: $white;
     }
-    &--submit{
+    &--button{
       color: $white;
       font-weight: bold;
       padding: 0 10px;
