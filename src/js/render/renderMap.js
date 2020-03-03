@@ -3,10 +3,10 @@ export default function renderMap(mainData){
   const longitude = mainData.coordinates.longitude;
   ymaps.ready(init);
     function init(){
-        let myMap = new ymaps.Map("map", {
-            center: [latitude, longitude],
-            zoom: 9,
-            controls: []
-        });
+      let myMap = new ymaps.Map("map", {
+        center: [latitude, longitude],
+        zoom: 10,
+        controls: ['trafficControl', 'typeSelector', 'fullscreenControl']
+      });
     }
 }

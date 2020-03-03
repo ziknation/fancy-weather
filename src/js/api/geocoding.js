@@ -1,19 +1,37 @@
 import getWeather from "./getWeather";
 
 async function geocoding(mainData) {
-  let apiKey = 'e42603ebcd574a43819b2249318b655a';
-  let api_url = 'https://api.opencagedata.com/geocode/v1/json';
+  if (mainData.isButtonClick){
+    const placeName = document.querySelector('.search--text').value;
+    const apiKey = 'e42603ebcd574a43819b2249318b655a';   
 
-  let latitude = mainData.coordinates.latitude;
-  let longitude = mainData.coordinates.longitude;
+    const url = `https://api.opencagedata.com/geocode/v1/json?q=${placeName}&key=${apiKey}`;
 
-  let url = `${api_url}?&q=${latitude}+${longitude}&key=${apiKey}`;
+    let response = await fetch(url);
+    let data = await response.json();
 
-  let response = await fetch(url);
-  let data = await response.json();
-  mainData.place.country = data.results[0].components.country;
-  mainData.place.city = data.results[0].components.city;
-  getWeather(mainData);
+    mainData.coordinates.latitude = data.results[0].geometry.lat;
+    mainData.coordinates.longitude = data.results[0].geometry.lng;
+
+    mainData.place.country = data.results[0].components.country;
+    mainData.place.city = data.results[0].formatted.split(',')[0].split(' ')[0];
+    getWeather(mainData);
+  }
+  else{
+    const apiKey = 'e42603ebcd574a43819b2249318b655a';
+    const api_url = 'https://api.opencagedata.com/geocode/v1/json';
+
+    const latitude = mainData.coordinates.latitude;
+    const longitude = mainData.coordinates.longitude;
+
+    const url = `${api_url}?&q=${latitude}+${longitude}&key=${apiKey}`;
+
+    const response = await fetch(url);
+    const data = await response.json();
+    mainData.place.country = data.results[0].components.country;
+    mainData.place.city = data.results[0].components.city;
+    getWeather(mainData);
+  }
 }
 
 export default geocoding;

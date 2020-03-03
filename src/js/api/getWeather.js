@@ -6,6 +6,7 @@ async function getWeather(mainData){
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=en&units=metric&APPID=${key}`;
   let response = await fetch(url);
   let data = await response.json();
+
   fillWeatherInMainData(data, mainData);
 }
 

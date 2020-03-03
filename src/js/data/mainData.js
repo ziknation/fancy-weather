@@ -27,7 +27,8 @@ let mainData = {
       sky: '',
       temperature: ''
     },
-  }
+  },
+  isButtonClick: false
 };
 
 export default mainData;

@@ -1,4 +1,12 @@
-export default function searchClick(event){
-  const input = document.querySelector('.search--text');
-  alert(input.innerHTML);
+import mainData from '../data/mainData';
+import geocoding from '../api/geocoding';
+
+export default function searchClick(){
+  if (document.querySelector('.search--text').value != ''){
+    mainData.isButtonClick = true;
+    geocoding(mainData);
+  }
+  else{
+    alert('Сначала введите название города');
+  }
 }
