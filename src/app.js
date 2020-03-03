@@ -1,13 +1,10 @@
 import './scss/base.scss';
-import baseHtml from './js/baseHTML';
+import baseHtml from './js/init/baseHTML';
 import usersCurrentLocation from './js/api/usersCurrentLocation';
-import fillMainData from './js/fillMainData';
-import tick from './js/tick'
+import timeTick from './js/init/timeTick'
 
 document.body.insertAdjacentHTML('afterbegin',baseHtml);
 
-let timerId = setInterval(tick, 1000);
+let timerId = setInterval(timeTick, 1000);
 
-usersCurrentLocation().then( location => {
-  fillMainData(location);
-});
+usersCurrentLocation();

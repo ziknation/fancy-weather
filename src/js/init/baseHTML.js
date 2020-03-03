@@ -63,9 +63,7 @@ const baseHtml = `<header>
   </div>
 </div>
 <div class="location">
-  <div class="location--map">
-    <img src="/src/img/map.png" alt="map">
-  </div>
+  <div id="map" class="location--map"></div>
   <div class="location--coordinates"></div>
 </div>
 </main>`;
