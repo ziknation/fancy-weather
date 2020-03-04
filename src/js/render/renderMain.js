@@ -11,7 +11,7 @@ export default async function renderMain(mainData){
   renderImages(mainData);
   renderDate(mainData);
   renderNextDaysTemperature(mainData);
-  
+
   if (mainData.isButtonClick || mainData.isLanguageChange){
     document.querySelector('#map').innerHTML = '';
     ymaps.ready(init);

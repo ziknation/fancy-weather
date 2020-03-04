@@ -4,8 +4,14 @@ let mainData = {
     longitude: ''
   },
   place:{
-    country: '',
-    city: ''
+    en:{
+      country: '',
+      city: ''
+    },
+    ru:{
+      country: '',
+      city: ''
+    }
   },
   weather:{
     current:{
@@ -32,6 +38,7 @@ let mainData = {
   isFahrenheit: false,
   language: 'en',
   isLanguageChange: false,
+  isLangJustChanged: false,
 };
 
 export default mainData;

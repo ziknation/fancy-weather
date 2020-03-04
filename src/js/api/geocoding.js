@@ -5,16 +5,22 @@ async function geocoding(mainData) {
     const placeName = document.querySelector('.search--text').value;
     const apiKey = 'e42603ebcd574a43819b2249318b655a';
 
-    const url = `https://api.opencagedata.com/geocode/v1/json?q=${placeName}&key=${apiKey}&language=${mainData.language}`;
+    const urlEn = `https://api.opencagedata.com/geocode/v1/json?q=${placeName}&key=${apiKey}&language=en`;
+    const responseEn = await fetch(urlEn);
+    const dataEn = await responseEn.json();
 
-    let response = await fetch(url);
-    let data = await response.json();
+    mainData.coordinates.latitude = dataEn.results[0].geometry.lat.toFixed(4);
+    mainData.coordinates.longitude = dataEn.results[0].geometry.lng.toFixed(4);
 
-    mainData.coordinates.latitude = data.results[0].geometry.lat;
-    mainData.coordinates.longitude = data.results[0].geometry.lng;
+    mainData.place.en.country = dataEn.results[0].components.country;
+    mainData.place.en.city = dataEn.results[0].formatted.split(',')[0].split(' ')[0];
 
-    mainData.place.country = data.results[0].components.country;
-    mainData.place.city = data.results[0].formatted.split(',')[0].split(' ')[0];
+    const urlRu = `https://api.opencagedata.com/geocode/v1/json?q=${placeName}&key=${apiKey}&language=ru`;
+    const responseRu = await fetch(urlRu);
+    const dataRu = await responseRu.json();
+
+    mainData.place.ru.country = dataRu.results[0].components.country;
+    mainData.place.ru.city = dataRu.results[0].formatted.split(',')[0].split(' ')[0];
     getWeather(mainData);
   }
   else{
@@ -24,13 +30,18 @@ async function geocoding(mainData) {
     const latitude = mainData.coordinates.latitude;
     const longitude = mainData.coordinates.longitude;
 
-    const url = `${api_url}?&q=${latitude}+${longitude}&key=${apiKey}&language=${mainData.language}`;
+    let urlEn = `${api_url}?&q=${latitude}+${longitude}&key=${apiKey}&language=en`;
+    let responseEn = await fetch(urlEn);
+    let dataEn = await responseEn.json();
+    mainData.place.en.country = dataEn.results[0].components.country;
+    mainData.place.en.city = dataEn.results[0].components.city;
 
-    const response = await fetch(url);
-    const data = await response.json();
-    mainData.place.country = data.results[0].components.country;
-    mainData.place.city = data.results[0].components.city;
-    console.log(data);
+    let urlRu = `${api_url}?&q=${latitude}+${longitude}&key=${apiKey}&language=ru`;
+    let responseRu = await fetch(urlRu);
+    let dataRu = await responseRu.json();
+    mainData.place.ru.country = dataRu.results[0].components.country;
+    mainData.place.ru.city = dataRu.results[0].components.city;
+
     getWeather(mainData);
   }
 }

@@ -1,13 +1,13 @@
 import renderMain from '../render/renderMain';
 
 export default function fillWeatherInMainData(data, mainData){
-  mainData.weather.current.sky = data.list[0].weather[0].main;
+  mainData.weather.current.sky = data.list[0].weather[0].main.toLowerCase();
   mainData.weather.current.wind = Math.round(data.list[0].wind.speed);
   mainData.weather.current.humidity = +data.list[0].main.humidity;
 
-  mainData.weather.day1.sky = data.list[8].weather[0].main;
-  mainData.weather.day2.sky = data.list[16].weather[0].main;
-  mainData.weather.day3.sky = data.list[24].weather[0].main;
+  mainData.weather.day1.sky = data.list[8].weather[0].main.toLowerCase();
+  mainData.weather.day2.sky = data.list[16].weather[0].main.toLowerCase();
+  mainData.weather.day3.sky = data.list[24].weather[0].main.toLowerCase();
 
   if (mainData.isFahrenheit){
     mainData.weather.current.temperature = Math.round(data.list[0].main.temp * 1.8 + 32);    //celsius convert to fahrenheit
