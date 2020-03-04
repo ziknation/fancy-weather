@@ -1,5 +1,5 @@
 export default function renderImages(mainData){
-  const currentImg = document.querySelectorAll('.forecast--general_information-img')[0];
+  const currentImg = document.querySelectorAll('.forecast--img')[0];
   const day1Img = document.querySelectorAll('.day_1_img')[0];
   const day2Img = document.querySelectorAll('.day_2_img')[0];
   const day3Img = document.querySelectorAll('.day_3_img')[0];

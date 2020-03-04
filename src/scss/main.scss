@@ -22,22 +22,22 @@ main{
           font-size: 24px;
         }
       }
-      &-img{
-        width: 200px;
-        position: relative;
-        top: 10px;
-        right: 70px;
-        margin-bottom: -100px;
-      }
+    }
+    &--img{
+      width: 200px;
+      position: relative;
+      top: -75px;
+      right: -275px;
+      margin-bottom: -185px;
     }
     &--main_information{
-      width: 460px;
+      width: 500px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       &-temperature{
         font-family: MontserratBold;
-        font-size: 206px;
+        font-size: 185px;
         font-weight: bold;
         &-span{
           font-size: 120px;

@@ -9,7 +9,7 @@ const baseHtml = `<header>
     </select>
     <div class="controls--units">
       <p class="controls--units-fahrenheit">F</p>
-      <p class="controls--units-celsius">C</p>
+      <p class="controls--units-celsius selected_unit">C</p>
     </div>        
   </div>
   <div class="search">
@@ -26,8 +26,8 @@ const baseHtml = `<header>
       <p class="forecast--general_information-text-place"></p>
       <p class="forecast--general_information-text-date">Mon 28 October 17:23</p>
     </div>
-    <img src="/src/img/animated/weather.svg" alt="weatherSVG" class="forecast--general_information-img">
   </div>
+  <img src="/src/img/animated/weather.svg" alt="weatherSVG" class="forecast--img">
   <div class="forecast--main_information">
     <p class="forecast--main_information-temperature"><p>
     <p class="forecast--main_information-addition"></p>

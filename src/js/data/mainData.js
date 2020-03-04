@@ -28,7 +28,8 @@ let mainData = {
       temperature: ''
     },
   },
-  isButtonClick: false
+  isButtonClick: false,
+  isFahrenheit: false,
 };
 
 export default mainData;
