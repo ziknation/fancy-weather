@@ -5,7 +5,6 @@ const baseHtml = `<header>
     <select class="controls--language">
       <option value="en">EN</option>
       <option value="ru">RU</option>
-      <option value="be">BE</option>
     </select>
     <div class="controls--units">
       <p class="controls--units-fahrenheit">F</p>

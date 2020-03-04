@@ -5,6 +5,7 @@ import timeTick from './js/init/timeTick';
 import searchClick from './js/controls/searchClick';
 import pressedButtonCheck from './js/controls/pressedButtonCheck';
 import unitChangeCheck from './js/controls/unitChangeCheck';
+import languageChangeCheck from './js/controls/languageChangeCheck';
 
 document.body.insertAdjacentHTML('afterbegin',baseHtml);
 
@@ -15,3 +16,4 @@ usersCurrentLocation();
 document.querySelectorAll('.search--button')[0].addEventListener('click',searchClick);
 document.addEventListener('keypress', pressedButtonCheck);
 document.querySelector('.controls--units').addEventListener('click', unitChangeCheck);
+document.querySelector('.controls--language').addEventListener('change', languageChangeCheck);

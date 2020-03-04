@@ -30,6 +30,8 @@ let mainData = {
   },
   isButtonClick: false,
   isFahrenheit: false,
+  language: 'en',
+  isLanguageChange: false,
 };
 
 export default mainData;

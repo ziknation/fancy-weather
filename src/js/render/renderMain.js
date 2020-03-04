@@ -12,7 +12,7 @@ export default async function renderMain(mainData){
   renderDate(mainData);
   renderNextDaysTemperature(mainData);
   
-  if (mainData.isButtonClick){
+  if (mainData.isButtonClick || mainData.isLanguageChange){
     document.querySelector('#map').innerHTML = '';
     ymaps.ready(init);
     function init(){

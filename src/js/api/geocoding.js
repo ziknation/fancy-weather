@@ -3,9 +3,9 @@ import getWeather from "./getWeather";
 async function geocoding(mainData) {
   if (mainData.isButtonClick){
     const placeName = document.querySelector('.search--text').value;
-    const apiKey = 'e42603ebcd574a43819b2249318b655a';   
+    const apiKey = 'e42603ebcd574a43819b2249318b655a';
 
-    const url = `https://api.opencagedata.com/geocode/v1/json?q=${placeName}&key=${apiKey}`;
+    const url = `https://api.opencagedata.com/geocode/v1/json?q=${placeName}&key=${apiKey}&language=${mainData.language}`;
 
     let response = await fetch(url);
     let data = await response.json();
@@ -24,12 +24,13 @@ async function geocoding(mainData) {
     const latitude = mainData.coordinates.latitude;
     const longitude = mainData.coordinates.longitude;
 
-    const url = `${api_url}?&q=${latitude}+${longitude}&key=${apiKey}`;
+    const url = `${api_url}?&q=${latitude}+${longitude}&key=${apiKey}&language=${mainData.language}`;
 
     const response = await fetch(url);
     const data = await response.json();
     mainData.place.country = data.results[0].components.country;
     mainData.place.city = data.results[0].components.city;
+    console.log(data);
     getWeather(mainData);
   }
 }
