@@ -38,7 +38,6 @@ let mainData = {
   isFahrenheit: false,
   language: 'en',
   isLanguageChange: false,
-  isLangJustChanged: false,
 };
 
 export default mainData;
