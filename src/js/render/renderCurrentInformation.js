@@ -9,7 +9,7 @@ export default function renderCurrentInformation(mainData){
   
   place.innerHTML = mainData.place[mainData.language].city + ', ' + 
   mainData.place[mainData.language].country;
-  
+
   currentTemperature.innerHTML = mainData.weather.current.temperature + degSign;
   additionInformation.innerHTML = `${languages[mainData.language].weather[mainData.weather.current.sky]} <br>
   ${languages[mainData.language].currentInformation.feels}

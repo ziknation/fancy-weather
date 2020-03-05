@@ -14,14 +14,7 @@ export default async function renderMain(mainData){
 
   if (mainData.isButtonClick || mainData.isLanguageChange){
     document.querySelector('#map').innerHTML = '';
-    ymaps.ready(init);
-    function init(){
-      let myMap = new ymaps.Map("map", {
-        center: [mainData.coordinates.latitude, mainData.coordinates.longitude],
-        zoom: 10,
-        controls: ['trafficControl', 'typeSelector', 'fullscreenControl']
-      });
-    }
+    renderMap(mainData);
   }
   else{
     renderMap(mainData);

@@ -1,13 +1,16 @@
 import fillWeatherInMainData from '../data/fillWeatherInMainData'
 
 async function getWeather(mainData){
-  const key = '1f69c21cbdecced9f5e422b5efb63930';
-  let city = mainData.place[mainData.language].city;
-  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=en&units=metric&APPID=${key}`;
-  let response = await fetch(url);
-  let data = await response.json();
+  const latitude = mainData.coordinates.latitude;
+  const longitude = mainData.coordinates.longitude;
 
-  fillWeatherInMainData(data, mainData);
+  const API_TOKEN = "045626b11a3f1e3d0a24b85fae2e7635";
+  const proxy = "https://evening-basin-27448.herokuapp.com/";
+  const URL = `https://api.darksky.net/forecast/${API_TOKEN}/${latitude},${longitude}?units=si`;
+  const response = await fetch(proxy+URL)
+  const forecast = await response.json();
+
+  fillWeatherInMainData(forecast, mainData);
 }
 
 export default getWeather;
