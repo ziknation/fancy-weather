@@ -27,9 +27,15 @@ main{
         &-place{
           font-size: 44px;
           font-weight: bold;
+          @media screen and (max-width: 1024px){
+            font-size: 34px;
+          }
         }
         &-date{
           font-size: 24px;
+          @media screen and (max-width: 1024px){
+            font-size: 20px;
+          }
         }
       }
     }
@@ -41,8 +47,8 @@ main{
       margin-bottom: -185px;
       @media screen and (max-width:1024px) {
         width: 125px;
-        top: -85px;
-        right: -188px;
+        top: -110px;
+        right: -210px;
       }
     }
     &--main_information{
@@ -57,17 +63,27 @@ main{
         font-family: MontserratBold;
         font-size: 185px;
         font-weight: bold;
+        @media screen and (max-width: 1024px) {
+          font-size: 100px;
+        }
         &-span{
-          font-size: 120px;
+          font-size: 85px;
           font-family: Montserrat;
           font-weight: bold;
           vertical-align: top;
+          @media screen and (max-width: 1024px) {
+            font-size: 55px;
+          }
         }
       }
       &-addition{
         font-size: 21px;
         padding-top: 50px;
         font-weight: bold;
+        @media screen and (max-width: 1024px) {
+          font-size: 19px;
+          font-weight: normal;
+        }
       }
     }
     &--next_days{
@@ -83,6 +99,9 @@ main{
       }
       & .next_days_icon{
         font-size: 70px;
+        @media screen and (max-width: 1024px){
+          font-size: 45px;
+        }
       }
       & .next_days_wrapper{
         display: flex;
@@ -122,3 +141,6 @@ main{
   border-radius: 10px;
 }
 
+.scale_class{
+  transform: scale(0.5);
+}

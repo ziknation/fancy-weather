@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: Montserrat;
-  src: url(/src/font/Montserrat.ttf);
+  src: url('/src/font/Montserrat.ttf');
 }
 
 body, p, h1, h2, h3, h4, h5, h6, li, ul, div, ol, select, option{
@@ -13,8 +13,7 @@ body, p, h1, h2, h3, h4, h5, h6, li, ul, div, ol, select, option{
 }
 
 body{
-  //background-image: url("/src/img/background.png");
-  background: linear-gradient(rgba(255,255,255,0.1), rgba(0, 0, 0, 0.5) ), url('/src/img/background.png');
+  background: linear-gradient(rgba(255,255,255,0.1), rgba(0, 0, 0, 0.5));
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

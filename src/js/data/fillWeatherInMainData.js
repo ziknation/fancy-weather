@@ -3,7 +3,7 @@ import renderMain from '../render/renderMain';
 export default function fillWeatherInMainData(forecast, mainData){
   mainData.weather.current.sky = forecast.currently.icon.split('-').join('');
   mainData.weather.current.wind = Math.round(forecast.currently.windSpeed);
-  mainData.weather.current.humidity = +forecast.currently.humidity * 100;
+  mainData.weather.current.humidity = (forecast.currently.humidity * 100).toString().slice(0,3);
 
   mainData.weather.day1.sky = forecast.daily.data[1].icon.split('-').join('');;
   mainData.weather.day2.sky = forecast.daily.data[2].icon.split('-').join('');;

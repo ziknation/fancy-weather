@@ -26,7 +26,6 @@ $grey: #888888;
     &--refresh{
       width: 44px;
       height: 44px;
-      background-image: url('../src/img/refreshBack.png');
       background-color: rgba(30%, 32%, 33%, 0.9);
       background-repeat: no-repeat;
       border-radius: 6px;  
@@ -47,7 +46,7 @@ $grey: #888888;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      background-image: url(/src/img/arrow.png);
+      background-image: url('/src/img/arrow.png');
       background-repeat: no-repeat;
       background-position-x: 37px;
       background-position-y: center;

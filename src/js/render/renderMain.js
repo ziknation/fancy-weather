@@ -4,6 +4,7 @@ import renderLocation from './renderLocation';
 import renderCurrentInformation from './renderCurrentInformation';
 import renderMap from './renderMap';
 import renderNextDaysTemperature from './renderNextDaysTemperature';
+import imageAPI from '../api/imageAPI';
 
 export default async function renderMain(mainData){
   renderCurrentInformation(mainData);
@@ -19,4 +20,5 @@ export default async function renderMain(mainData){
   else{
     renderMap(mainData);
   }
+  imageAPI(mainData);
 }
